@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MasterMind</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main id="mastermind">
+      <section class="about-game">
+        <h1 class="game-title">
+          <span class="M">M</span>
+          <span class="A">A</span>
+          <span class="S">S</span>
+          <span class="T">T</span>
+          <span class="E">E</span>
+          <span class="R">R</span>
+          <span class="Mind">MIND</span>
+        </h1>
+        <article class="rules">
+          <span class="toggle-button">Show Rules</span>
+          <p class="info">
+            Try to guess the pattern, in both order and color, within ten turns.
+            After submitting a row, a small black peg is placed for each code
+            peg from the guess which is correct in both color and position. A
+            white peg indicates the existence of a correct color code peg placed
+            in the wrong position. More info on
+            <a
+              href="https://en.wikipedia.org/wiki/Mastermind_(board_game)"
+              target="_blank"
+              >Wikipedia</a
+            >
+          </p>
+        </article>
+      </section>
+
+      <section class="play-area">
+        <section class="decoding-board left">
+          <!-- box1 -->
+          <article class="clearfix-box">
+            <article class="left">
+              <article class="decode-row">
+                <span class="peg">
+                  <input type="radio" name="decodeRow-1" value="1" id="first" />
+                  <label for="first"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-1"
+                    value="2"
+                    id="second"
+                  />
+                  <label for="second"></label>
+                </span>
+                <span class="peg">
+                  <input type="radio" name="decodeRow-1" value="3" id="third" />
+                  <label for="third"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-1"
+                    value="4"
+                    id="fourth"
+                  />
+                  <label for="fourth"></label>
+                </span>
+              </article>
+            </article>
+
+            <section class="left">
+              <button class="submit"></button>
+            </section>
+            <section class="right">
+              <article class="hints">
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+              </article>
+            </section>
+          </article>
+
+          <!-- Box2 -->
+          <article class="clearfix-box">
+            <article class="left">
+              <article class="decode-row">
+                <span class="peg">
+                  <input type="radio" name="decodeRow-2" value="1" id="first" />
+                  <label for="first"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-2"
+                    value="2"
+                    id="second"
+                  />
+                  <label for="second"></label>
+                </span>
+                <span class="peg">
+                  <input type="radio" name="decodeRow-2" value="3" id="third" />
+                  <label for="third"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-2"
+                    value="4"
+                    id="fourth"
+                  />
+                  <label for="fourth"></label>
+                </span>
+              </article>
+            </article>
+
+            <section class="left">
+              <button class="submit"></button>
+            </section>
+            <section class="right">
+              <article class="hints">
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+              </article>
+            </section>
+          </article>
+
+          <!-- box 3 -->
+          <article class="clearfix-box">
+            <article class="left">
+              <article class="decode-row">
+                <span class="peg">
+                  <input type="radio" name="decodeRow-3" value="1" id="first" />
+                  <label for="first"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-3"
+                    value="2"
+                    id="second"
+                  />
+                  <label for="second"></label>
+                </span>
+                <span class="peg">
+                  <input type="radio" name="decodeRow-3" value="3" id="third" />
+                  <label for="third"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-3"
+                    value="4"
+                    id="fourth"
+                  />
+                  <label for="fourth"></label>
+                </span>
+              </article>
+            </article>
+
+            <section class="left">
+              <button class="submit"></button>
+            </section>
+
+            <section class="right">
+              <article class="hints">
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+              </article>
+            </section>
+          </article>
+
+          <!-- box4 -->
+          <article class="clearfix-box">
+            <article class="left">
+              <article class="decode-row">
+                <span class="peg">
+                  <input type="radio" name="decodeRow-4" value="1" id="first" />
+                  <label for="first"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-4"
+                    value="2"
+                    id="second"
+                  />
+                  <label for="second"></label>
+                </span>
+                <span class="peg">
+                  <input type="radio" name="decodeRow-4" value="3" id="third" />
+                  <label for="third"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-4"
+                    value="4"
+                    id="fourth"
+                  />
+                  <label for="fourth"></label>
+                </span>
+              </article>
+            </article>
+
+            <section class="left">
+              <button class="submit"></button>
+            </section>
+
+            <section class="right">
+              <article class="hints">
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+              </article>
+            </section>
+          </article>
+
+          <!-- box 5 -->
+          <article class="clearfix-box">
+            <article class="left">
+              <article class="decode-row">
+                <span class="peg">
+                  <input type="radio" name="decodeRow-5" value="1" id="first" />
+                  <label for="first"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-5"
+                    value="2"
+                    id="second"
+                  />
+                  <label for="second"></label>
+                </span>
+                <span class="peg">
+                  <input type="radio" name="decodeRow-5" value="3" id="third" />
+                  <label for="third"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-5"
+                    value="4"
+                    id="fourth"
+                  />
+                  <label for="fourth"></label>
+                </span>
+              </article>
+            </article>
+
+            <section class="left">
+              <button class="submit"></button>
+            </section>
+
+            <section class="right">
+              <article class="hints">
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+              </article>
+            </section>
+          </article>
+
+          <!-- box 6 -->
+          <article class="clearfix-box">
+            <article class="left">
+              <article class="decode-row">
+                <span class="peg">
+                  <input type="radio" name="decodeRow-6" value="1" id="first" />
+                  <label for="first"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-6"
+                    value="2"
+                    id="second"
+                  />
+                  <label for="second"></label>
+                </span>
+                <span class="peg">
+                  <input type="radio" name="decodeRow-6" value="3" id="third" />
+                  <label for="third"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-6"
+                    value="4"
+                    id="fourth"
+                  />
+                  <label for="fourth"></label>
+                </span>
+              </article>
+            </article>
+
+            <section class="left">
+              <button class="submit"></button>
+            </section>
+
+            <section class="right">
+              <article class="hints">
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+              </article>
+            </section>
+          </article>
+
+          <!-- box 7 -->
+          <article class="clearfix-box">
+            <article class="left">
+              <article class="decode-row">
+                <span class="peg">
+                  <input type="radio" name="decodeRow-7" value="1" id="first" />
+                  <label for="first"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-7"
+                    value="2"
+                    id="second"
+                  />
+                  <label for="second"></label>
+                </span>
+                <span class="peg">
+                  <input type="radio" name="decodeRow-7" value="3" id="third" />
+                  <label for="third"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-7"
+                    value="4"
+                    id="fourth"
+                  />
+                  <label for="fourth"></label>
+                </span>
+              </article>
+            </article>
+
+            <section class="left">
+              <button class="submit"></button>
+            </section>
+
+            <section class="right">
+              <article class="hints">
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+              </article>
+            </section>
+          </article>
+
+          <!-- box 8 -->
+          <article class="clearfix-box">
+            <article class="left">
+              <article class="decode-row">
+                <span class="peg">
+                  <input type="radio" name="decodeRow-8" value="1" id="first" />
+                  <label for="first"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-8"
+                    value="2"
+                    id="second"
+                  />
+                  <label for="second"></label>
+                </span>
+                <span class="peg">
+                  <input type="radio" name="decodeRow-8" value="3" id="third" />
+                  <label for="third"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-8"
+                    value="4"
+                    id="fourth"
+                  />
+                  <label for="fourth"></label>
+                </span>
+              </article>
+            </article>
+
+            <section class="left">
+              <button class="submit"></button>
+            </section>
+
+            <section class="right">
+              <article class="hints">
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+              </article>
+            </section>
+          </article>
+
+          <!-- box 9 -->
+          <article class="clearfix-box">
+            <article class="left">
+              <article class="decode-row">
+                <span class="peg">
+                  <input type="radio" name="decodeRow-9" value="1" id="first" />
+                  <label for="first"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-9"
+                    value="2"
+                    id="second"
+                  />
+                  <label for="second"></label>
+                </span>
+                <span class="peg">
+                  <input type="radio" name="decodeRow-9" value="3" id="third" />
+                  <label for="third"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-9"
+                    value="4"
+                    id="fourth"
+                  />
+                  <label for="fourth"></label>
+                </span>
+              </article>
+            </article>
+
+            <section class="left">
+              <button class="submit"></button>
+            </section>
+
+            <section class="right">
+              <article class="hints">
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+              </article>
+            </section>
+          </article>
+
+          <!-- box 10 -->
+          <article class="clearfix-box">
+            <article class="left">
+              <article class="decode-row">
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-10"
+                    value="1"
+                    id="first"
+                  />
+                  <label for="first"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-10"
+                    value="2"
+                    id="second"
+                  />
+                  <label for="second"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-10"
+                    value="3"
+                    id="third"
+                  />
+                  <label for="third"></label>
+                </span>
+                <span class="peg">
+                  <input
+                    type="radio"
+                    name="decodeRow-10"
+                    value="4"
+                    id="fourth"
+                  />
+                  <label for="fourth"></label>
+                </span>
+              </article>
+            </article>
+
+            <section class="left">
+              <button class="submit"></button>
+            </section>
+
+            <section class="right">
+              <article class="hints">
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+                <span class="hint"></span>
+              </article>
+            </section>
+          </article>
+        </section>
+
+        <section class="color-palatte right">
+          <span class="peg one">
+            <input type="radio" name="peg" id="peg-1" value="one" />
+            <label for="peg-1"></label>
+          </span>
+          <span class="peg two">
+            <input type="radio" name="peg" id="peg-2" value="two" />
+
+            <label for="peg-2"></label>
+          </span>
+          <span class="peg three">
+            <input type="radio" name="peg" id="peg-3" value="three" />
+            <label for="peg-3"></label>
+          </span>
+          <span class="peg four">
+            <input type="radio" name="peg" id="peg-4" value="four" />
+            <label for="peg-4"></label>
+          </span>
+          <span class="peg five">
+            <input type="radio" name="peg" id="peg-5" value="five" />
+            <label for="peg-5"></label>
+          </span>
+          <span class="peg six">
+            <input type="radio" name="peg" id="peg-6" value="six" />
+            <label for="peg-6"></label>
+          </span>
+        </section>
+      </section>
+
+      <section class="endgame">
+        <artcile class="endgame-relative">
+          <h2 class="endgame-header">GAME OVER</h2>
+          <button class="endgame-button">PLAY AGAIN</button>
+        </artcile>
+
+        <article class="endgame-relative endgame-overlay"></article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-thank">
+        You can read about how this game was done here:
+        <br />
+        <a href="http://zofiakorcz.pl/mastermind-react-es6-webpack"
+          >Mastermind game in React and ECMAScript 6.</a
+        >
+      </p>
+      <p>
+        ©
+        <a href="http://zofiakorcz.pl" class="footer-link" target="_blank"
+          >Zofia Korcz</a
+        >
+      </p>
+    </footer>
+    <script src="mastermind.js"></script>
+  </body>
+</html>

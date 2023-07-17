@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: #f4f4f4;
+  font-family: serif;
+}
+#mastermind {
+  width: 334px;
+  margin: 20px 10px 0px 10px;
+}
+.rules {
+  margin: 20px 0;
+}
+.toggle-button {
+  cursor: pointer;
+}
+.info {
+  border: #eaebe9 1px solid;
+  padding: 10px;
+  display: none;
+}
+
+@media only screen and (min-device-width: 840px) {
+  #mastermind {
+    width: 405px;
+    margin: 30px auto 0;
+  }
+  h1 {
+    font-size: 2.6rem;
+    font-family: "Cinzel", serif;
+    letter-spacing: 3px;
+  }
+  .footer {
+    width: 405px;
+    margin: 30px auto 0;
+  }
+}
+.game-title {
+  width: max-content;
+  display: inline-flex;
+}
+h1 span {
+  color: #ffffff;
+  padding: 0 5px;
+  font-weight: bold;
+}
+.M,
+.one input[type="radio"] + label {
+  background: #ffb400;
+}
+.A,
+.two input[type="radio"] + label {
+  background: #ff5a5f;
+}
+.S,
+.three input[type="radio"] + label {
+  background-color: #8ce071;
+}
+.T,
+.four input[type="radio"] + label {
+  background-color: #00d1c1;
+}
+.E,
+.five input[type="radio"] + label {
+  background-color: #007a87;
+}
+.R,
+.six input[type="radio"] + label {
+  background-color: #7b0051;
+}
+.Mind {
+  color: #333333;
+}
+
+.play-area:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix-box {
+  padding: 10px 0 10px 10px;
+  width: 280px;
+  height: 40px;
+  border: #f4f4f4 1px solid;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.decode-row {
+  /* opacity: 0.5; */
+  margin-bottom: 15px;
+}
+.active {
+  border: #060606 1px solid;
+}
+input[type="radio"] {
+  display: none;
+}
+.peg,
+input[type="radio"] + label {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border: #eaebe9 1px solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.submit {
+  display: none;
+  width: 20px;
+  height: 5px;
+  position: relative;
+  margin: 15px 7px;
+  border: none;
+  cursor: pointer;
+  background-color: #f4f4f4;
+}
+.submit:before {
+  left: 6px;
+  width: 5px;
+  height: 12px;
+  border-width: 0 5px 5px 0;
+  top: 50%;
+  border-style: solid;
+  border-color: #b4bb69;
+  margin-top: -11px;
+  transform: rotate(45deg);
+  content: "";
+  position: absolute;
+}
+.submit:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+}
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.hints {
+  width: 55px;
+  margin-top: 0;
+}
+.hint {
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border: 1px solid #28222d;
+  border-radius: 50%;
+}
+
+.color-palatte {
+  width: 50px;
+  margin-top: 10px;
+}
+
+.endgame {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+}
+.endgame-relative {
+  position: relative;
+  display: block;
+  left: 50%;
+  top: 40%;
+  margin-left: -170px;
+  padding: 20px;
+  width: 300px;
+  z-index: 3;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  color: #ffffff;
+}
+.failure {
+  background-color: #db4445;
+}
+.success {
+  background-color: #8ce071;
+}
+.endgame-header {
+  font-family: "Cinzel", serif;
+  font-size: 30px;
+}
+.endgame-button {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  margin-top: 20px;
+  border-radius: 40px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  color: black;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.endgame-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: #000000;
+  opacity: 0.3;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.footer {
+  padding: 8px 0;
+  border-top: 1px solid #a8a8a8;
+}
+.footer p {
+  padding: 4px 0 4px 0;
+}
+a {
+  color: #1a8d7c;
+  text-decoration: none;
+  border-bottom: 1px dotted #1a8d7c;
+}
