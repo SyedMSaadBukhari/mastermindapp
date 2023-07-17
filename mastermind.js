@@ -36,7 +36,7 @@ function gameStart() {
   });
 
   clearfixBox = document.getElementsByClassName("clearfix-box");
-  console.log(clearfixBox[0]);
+
   clearfixBox[0].classList.add("active");
 
   decodeRow = document.getElementsByClassName("decode-row");
@@ -84,8 +84,6 @@ function checkRowCompletion() {
     }
 
     clearfixBox[activeRow].classList.remove("disabled");
-
-    // clearfixBox[activeRow].classList.remove("disabled");
   }
 }
 
@@ -172,8 +170,10 @@ function gameReset() {
       hints[k].style.backgroundColor = "";
     }
   }
+  submitButtons.forEach(function (submitButton) {
+    submitButton.style.display = "none";
+  });
 
-  document.querySelector(".submit").style.display = "none";
   gameFaliure.style.display = "none";
   gameStart();
 }
